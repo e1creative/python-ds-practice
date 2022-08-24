@@ -11,3 +11,18 @@ def mode(nums):
         >>> mode([2, 2, 3, 3, 2])
         2
     """
+    number_count = {}
+
+    for num in nums:
+        number_count[num] = nums.count(num)
+    
+    # initialize our most common number to 0
+    most_common_number = 0
+    
+    for (num, count) in number_count.items():
+        if count > number_count.get(most_common_number, 0):
+            most_common_number = num
+        
+    return most_common_number
+    # for (k,v) in number_count.items:
+    #     print(k,v)

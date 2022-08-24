@@ -21,3 +21,11 @@ def is_palindrome(phrase):
         >>> is_palindrome('Noon')
         True
     """
+    #remove white space and lowercase
+    phrase_to_list = list(phrase.replace(" ", "").lower())
+
+    copy_of_phrase_to_list = phrase_to_list.copy()
+
+    copy_of_phrase_to_list.reverse()
+
+    return phrase_to_list == copy_of_phrase_to_list

@@ -21,3 +21,17 @@ def sum_pairs(nums, goal):
         >>> sum_pairs([11, 20, 4, 2, 1, 5], 100)
         ()
     """
+    for val1 in nums:
+        for val2 in nums:
+            if val1 + val2 == goal:
+                print((val1, val2))
+                return ((val1, val2))
+            return (())
+
+sum_pairs([1, 2, 2, 10], 4)
+sum_pairs([4, 2, 10, 5, 1], 6)
+sum_pairs([5, 1, 4, 8, 3, 2], 7)
+sum_pairs([11, 20, 4, 2, 1, 5], 100)
+sum_pairs([50, 20, 4, 2, 1, 5], 100)
+
+# what does "finish" mean in the 3rd example

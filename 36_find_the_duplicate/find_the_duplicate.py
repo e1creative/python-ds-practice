@@ -13,3 +13,9 @@ def find_the_duplicate(nums):
         >>> find_the_duplicate([2, 1, 3, 4]) is None
         True
     """
+    for el in set(nums):
+        #check if the el exists more than once in the nums list
+        if nums.count(el) > 1:
+            return el
+
+    return None

@@ -7,3 +7,8 @@ def reverse_string(phrase):
         >>> reverse_string('sauce')
         'ecuas'
     """
+    converted_to_list = list(phrase)
+
+    converted_to_list.reverse()
+
+    return "".join(converted_to_list)
